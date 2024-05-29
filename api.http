@@ -1,0 +1,124 @@
+@host =http://localhost:8082
+
+###
+POST {{host}}/registration
+Content-Type: application/json
+
+{
+    "asuransi":false,
+    "pasien_id":32,
+    "poli_id":2,
+    "asuransi_pasien_id":null,
+    "tanggal":"2024-02-01 00:00:00"
+}
+
+###
+POST {{host}}/antrian
+Content-Type: application/json
+
+{
+    
+}
+
+###
+POST {{host}}/pasien
+Content-Type: application/json
+
+{
+    "nama":"udin",
+    "nik":"5203111502010004",
+    "alamat":"kopang",
+    "kontak":"888"
+}
+
+###
+POST {{host}}/petugas
+Content-Type: application/json
+
+{
+    "nama_petugas":"Dr.Risa",
+    "tupoksi":"POLIKLINIK JIWA",
+    "poli_id":"f31e54fd-3d3a-41d3-b76c-0d60117b9085"
+}
+
+
+###
+POST {{host}}/poli
+Content-Type: application/json
+
+{
+    "nama_poli":"a"
+}
+
+###
+POST {{host}}/listasuransi
+Content-Type: application/json
+
+{
+    "nama_asuransi":"Jasa Raharja",
+    "aktif":true,
+    "persen_ditanggung":100
+}
+
+###
+POST {{host}}/asuransipasien
+Content-Type: application/json
+
+{
+    "no_asuransi":222,
+    "kelas":"A",
+    "pasien_id":"953d1011-943e-4fa8-9b53-9a289aed9327" ,
+    "asuransi_id":"9d9e3ca0-8eea-4d5b-aa29-beaae3acbe12"
+}
+
+###
+GET {{host}}/asuransipasien
+
+###
+GET {{host}}/listasuransi
+
+###
+GET {{host}}/pasien/
+
+###
+GET  {{host}}/pasien/no-rm?no_rm=2400001
+
+
+###
+GET {{host}}/pasien/2400003
+
+###
+GET {{host}}/poli
+
+###
+GET  {{host}}/registration/dataantrian
+
+
+###
+DELETE {{host}}/pasien/5
+
+###
+GET {{host}}/registration/registration-pasien
+
+###
+POST {{host}}/registration
+Content-Type: application/json
+
+{
+    "asuransi":false,
+    "pasien_id":"953d1011-943e-4fa8-9b53-9a289aed9327",
+    "poli_id":"f31e54fd-3d3a-41d3-b76c-0d60117b9085",
+    "asuransi_pasien_id":"-",
+    "tanggal":"2024-02-15"
+}
+
+###
+POST {{host}}/kamar
+Content-Type: application/json
+
+{
+    "nama_kamar":"rinjani",
+    "jumlah_bed":10,
+    "tarif_per_malam":50000,
+    "list_asuransi_id":"9d9e3ca0-8eea-4d5b-aa29-beaae3acbe12"
+}
